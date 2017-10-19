@@ -1,0 +1,55 @@
+doctype html
+html
+	head
+		title= `${title} | ${h.siteName}`
+		link(rel='stylesheet', href='/dist/style.css')
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:700" rel="stylesheet">
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+	body
+		block header
+			header.top
+				nav.nav
+					.nav__section.nav__section--pages
+						//- li.nav__item.dropdown
+						//- 	a.nav__link.dropbtn(href="/")
+						//- 		//- != h.icon('shelves')
+						//- 		//- span Shelves
+						//- 	//- .dropdown-content
+						//- 	//- 	+shelves()
+						each item in h.menu
+							li.nav__item
+								a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
+									//- != h.icon(item.icon)
+									span #{item.title}
+					//- .nav__section.nav__section--search
+					//- 	.search
+					//- 		input.search__input(type="text" placeholder="Search..." name="search")
+					//- 		.search__results
+					if user	
+						.nav__section.nav__section--user
+							li.nav__item: a.nav__link(href="/add", class=(currentPath.startsWith('/add') ? 'nav__link--active' : ''))
+								//- != h.icon('pencil')
+								//- span Add
+							li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : ''))
+								//- != h.icon('logout')
+								//- span Logout
+						//- else
+						//- 	li.nav__item: a.nav__link(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : ''))
+						//- 		!= h.icon('pencil')
+						//- 		span Log In
+		block messages
+			if locals.flashes
+				.inner
+					.flash-messages
+						- const categories = Object.keys(locals.flashes)
+						each category in categories
+							each message in flashes[category]
+								.flash(class=`flash--${category}`)
+									p.flash__text!= message
+									button.flash__remove(onClick="this.parentElement.remove()") &times;	
+
+		.content
+			block content
+
+		block scripts
+			script(src="/dist/App.bundle.js")

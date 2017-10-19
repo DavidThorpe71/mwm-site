@@ -18,11 +18,11 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Record Shelves`;
+exports.siteName = `MW Metalworks`;
 
 exports.menu = [
-  // { slug: '/shelves', title: 'Shelves', icon: 'shelves', },
-  { slug: '/records', title: 'Records', icon: 'vinyl', }
-  // { slug: '/formats', title: 'Formats', icon: 'format', },
-  // { slug: '/add', title: 'Add', icon: 'add', },
+  { slug: '/koolduct', title: 'Koolduct', icon: 'shelves', },
+  { slug: '/supplyandinstall', title: 'Supply & Install', icon: 'vinyl', },
+  { slug: '/services', title: 'Services', icon: 'format', },
+  { slug: '/contact', title: 'Contact', icon: 'add', },
 ];
