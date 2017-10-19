@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  margin: 12px;
+  &__results {
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    box-shadow: 0 0 5px silver;
+    z-index: 5;
+  }
+  &__input {
+    color: black;
+    min-width: 145px;
+    &:focus {
+      outline-color: silver;
+    }
+  }
+  &__result {
+    padding:5px;
+    display: block;
+    &--active {
+      background: $grey;
+    }
+  }
+}
+
