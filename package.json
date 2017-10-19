@@ -2,7 +2,7 @@
   "name": "mwm-site",
   "version": "0.0.1",
   "private": true,
-    "engines": {
+  "engines": {
     "node": ">= 7.6.0"
   },
   "scripts": {
