@@ -32,6 +32,8 @@ const postcss = {
   }
 };
 
+
+
 // this is our sass/css loader. It handles files that are require('something.scss')
 const styles = {
   test: /\.(scss)$/,
@@ -50,7 +52,7 @@ const uglify = new webpack.optimize.UglifyJsPlugin({ // eslint-disable-line
 const config = {
   entry: {
     // we only have 1 entry, but I've set it up for multiple in the future
-    App: './public/javascripts/recordshelves-app.js'
+    App: './public/javascripts/mwm-app.js'
   },
   // we're using sourcemaps and here is where we specify which kind of sourcemap to use
   devtool: 'source-map',
@@ -69,7 +71,7 @@ const config = {
     rules: [javascript, styles]
   },
   // finally we pass it an array of our plugins - uncomment if you want to uglify
-  // plugins: [uglify]
+  plugins: [uglify]
   plugins: [
     // here is where we tell it to output our css to a separate file
     new ExtractTextPlugin('style.css'),

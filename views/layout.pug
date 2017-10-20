@@ -2,29 +2,25 @@ doctype html
 html
 	head
 		title= `${title} | ${h.siteName}`
+		<link rel="stylesheet" href="/dist/owl.carousel.min.css" />
+		<script src="/dist/jquery.min.js"></script>
 		link(rel='stylesheet', href='/dist/style.css')
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:700" rel="stylesheet">
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 	body
 		block header
 			header.top
 				nav.nav
 					.nav__section.nav__section--pages
-						//- li.nav__item.dropdown
-						//- 	a.nav__link.dropbtn(href="/")
-						//- 		//- != h.icon('shelves')
-						//- 		//- span Shelves
-						//- 	//- .dropdown-content
-						//- 	//- 	+shelves()
+						li.nav__item
+							a.nav__link(href="/")
+								//- Replace this with MWM logo
+								span MW
+
 						each item in h.menu
 							li.nav__item
 								a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
 									//- != h.icon(item.icon)
 									span #{item.title}
-					//- .nav__section.nav__section--search
-					//- 	.search
-					//- 		input.search__input(type="text" placeholder="Search..." name="search")
-					//- 		.search__results
 					if user	
 						.nav__section.nav__section--user
 							li.nav__item: a.nav__link(href="/add", class=(currentPath.startsWith('/add') ? 'nav__link--active' : ''))
@@ -52,4 +48,6 @@ html
 			block content
 
 		block scripts
+
+			<script src="/dist/owl.carousel.min.js"></script>
 			script(src="/dist/App.bundle.js")

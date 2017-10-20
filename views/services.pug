@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	script.
+		$(document).ready(function(){
+			const owl = $(".owl-carousel");
+			owl.owlCarousel({
+				item: 7,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout:1000,
+				autoplayHoverPause: true
+			});
+		});
+	.inner
+		h2= title
+		.owl-carousel
+			.square.square1 1
+			.square.square2 2
+			.square.square3 3
+			.square.square4 4
+			.square.square5 5
+			.square.square6 6
+			.square.square7 7

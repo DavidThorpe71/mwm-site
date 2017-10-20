@@ -22,7 +22,7 @@ exports.siteName = `MW Metalworks`;
 
 exports.menu = [
   { slug: '/koolduct', title: 'Koolduct', icon: 'shelves', },
-  { slug: '/supplyandinstall', title: 'Supply & Install', icon: 'vinyl', },
+  { slug: '/supply', title: 'Supply & Install', icon: 'vinyl', },
   { slug: '/services', title: 'Services', icon: 'format', },
   { slug: '/contact', title: 'Contact', icon: 'add', },
 ];
