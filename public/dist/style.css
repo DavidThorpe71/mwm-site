@@ -1,9 +1,12 @@
 @charset "UTF-8";
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  position: relative;
+  min-height: 100%; }
 
 body {
-  background: #f0f0f0; }
+  background: #f0f0f0;
+  margin: 0 0 15px; }
 
 .content {
   margin: 10px; }
@@ -11,6 +14,14 @@ body {
 .inner {
   max-width: 900px;
   margin: 0 auto; }
+
+footer {
+  margin: 0 auto;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  height: 15px;
+  overflow: hidden; }
 
 html {
   box-sizing: border-box; }
@@ -442,9 +453,6 @@ a {
   text-decoration: none;
   color: #303030; }
 
-p a {
-  border-bottom: 2px solid #FFC40E; }
-
 .title {
   word-wrap: break-word;
   position: relative;
@@ -453,6 +461,11 @@ p a {
   z-index: 2; }
   .title--long {
     font-size: 30px; }
+
+.contacts {
+  font-size: 14px; }
+  .contacts__phone, .contacts__email {
+    margin: 5px; }
 
 @keyframes slideIn {
   0% {
@@ -521,7 +534,6 @@ p a {
   .nav__item {
     -ms-flex-item-align: end;
         align-self: flex-end;
-    width: 60px;
     display: -ms-flexbox;
     display: flex;
     margin: 10px 10px 0px 10px; }
@@ -529,7 +541,9 @@ p a {
     display: inline-block;
     text-align: center;
     border-bottom: 5px solid transparent; }
-    .nav__link:hover, .nav__link--active, .nav .dropbtn:hover, .nav .dropbtn--active {
+    .nav__link:hover, .nav .dropbtn:hover {
+      color: #3588CC; }
+    .nav__link--active, .nav .dropbtn--active {
       color: #3588CC; }
 
 input, textarea {
@@ -781,9 +795,29 @@ pre.error {
     padding: 1rem;
     text-align: center; }
 
-.square {
-  height: 50px;
-  width: 250px;
-  border: solid black 5px; }
+.header__top {
+  background-color: #f9f9f8;
+  display: -ms-flexbox;
+  display: flex; }
+
+.name {
+  margin-bottom: 0px; }
+
+.logo {
+  margin: 5px;
+  height: 90px;
+  width: 90px; }
+
+.contacts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.contacts a:hover {
+  color: #3588CC; }
+
+.map {
+  max-height: 420px; }
 
 /*# sourceMappingURL=style.css.map*/

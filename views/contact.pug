@@ -2,4 +2,12 @@ extends layout
 
 block content
 	.inner
-		h2= title
+		h2 Get in Touch
+		p <strong>Phone: </strong> 
+			a(href="tel:01256 331334") 01256 331334
+		p <strong>Email: </strong>
+			a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
+		p 
+			<strong>Address: </strong>Unit 3 Devonshire Business Park, Knights Park Road, Basingstoke, RG21 6XN
+		img.map(src=h.staticMap)
+		form(action="POST")

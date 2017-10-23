@@ -1,0 +1,26 @@
+.header__top {
+	background-color: #f9f9f8;
+	display: flex;
+	// align-items: center;
+}
+
+.name {
+	margin-bottom: 0px;
+}
+
+.logo {
+	margin: 5px;
+	height: 90px;
+	width: 90px;
+}
+
+
+.contacts {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts a:hover {
+	color: #3588CC;	
+}
+

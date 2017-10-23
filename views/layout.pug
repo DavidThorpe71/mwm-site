@@ -2,20 +2,26 @@ doctype html
 html
 	head
 		title= `${title} | ${h.siteName}`
-		<link rel="stylesheet" href="/dist/owl.carousel.min.css" />
-		<script src="/dist/jquery.min.js"></script>
+		link(rel="stylesheet" href="/dist/owl.carousel.min.css")
+		script(src="/dist/jquery.min.js")
 		link(rel='stylesheet', href='/dist/style.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 	body
 		block header
 			header.top
+				.header__top
+					.header__top--logo
+						a(href="/")
+							img.logo(src="/images/MWM.jpg", alt="MW Metalworks logo")
+					.header__top--info
+						h2.name MW Metalworks
+						.contacts
+							.contacts__email
+								a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
+							.contacts__phone
+								a(href="tel:01256331334") 01256 331334
 				nav.nav
 					.nav__section.nav__section--pages
-						li.nav__item
-							a.nav__link(href="/")
-								//- Replace this with MWM logo
-								span MW
-
 						each item in h.menu
 							li.nav__item
 								a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
@@ -47,7 +53,10 @@ html
 		.content
 			block content
 
-		block scripts
+		block footer
+			footer.bottom
+				span © Copyright 2017. MW Metalworks Ltd. All Rights Reserved.
 
-			<script src="/dist/owl.carousel.min.js"></script>
+		block scripts
+			script(src="/dist/owl.carousel.min.js")
 			script(src="/dist/App.bundle.js")

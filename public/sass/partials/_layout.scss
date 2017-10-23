@@ -1,9 +1,12 @@
 html {
   font-size: 10px;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
   background:#f0f0f0;
+  margin: 0 0 15px;
 }
 
 .content {
@@ -13,4 +16,14 @@ body {
 .inner {
   max-width:900px;
   margin: 0 auto;
+}
+
+// TODO: is this needed?
+footer {
+  	margin: 0 auto;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    height: 15px;
+    overflow: hidden;
 }

@@ -20,9 +20,10 @@ a {
   color:$black;
 }
 
-p a {
-  border-bottom: 2px solid $yellow;
-}
+//Possible underline for links here:
+// p a {
+//   border-bottom: 2px solid pink;
+// }
 
 p {
   // line-height: 2;
@@ -60,4 +61,12 @@ p {
   //   $yellowa: rgba($yellow,0.8);
   //   background-image: linear-gradient(to right, $yellowa 100%, $yellowa 50%);
   // }
+}
+
+.contacts {
+  font-size: 14px;
+  &__phone,
+  &__email {
+    margin: 5px;
+  }
 }

@@ -13,7 +13,6 @@
 
 	&__item {
 		align-self: flex-end;
-		width: 60px;
 		display: flex;
 		margin: 10px 10px 0px 10px;
 	}
@@ -21,9 +20,11 @@
 		display: inline-block;
 		text-align: center;
 		border-bottom: 5px solid transparent;
-		// transition: all 0.3s;
-		&:hover, &--active {
+		&:hover {
       		color: #3588CC;
+      	}
+      	&--active {
+      		color: #3588CC
       	}
 	}
 // }
@@ -47,3 +48,4 @@
 //     height: 40px;
 //     width: 40px;
 }
+
