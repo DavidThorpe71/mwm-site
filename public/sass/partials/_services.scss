@@ -1,5 +1,19 @@
-.square {
-	// height: 50px;
-	// width: 250px;
-	// border: solid black 5px;
+.top__images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.services__image {
+	margin: 10px;
+	background: white;
+	&--text {
+		margin: 0px;
+		padding: 5px;
+	}
+}
+
+.bottom__text li {
+	padding: 5px;
+	font-size: 16px;
 }

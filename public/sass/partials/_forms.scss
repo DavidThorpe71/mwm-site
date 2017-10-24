@@ -1,7 +1,8 @@
 input, textarea {
-  width:100%;
+  width: 100%;
   padding:10px;
-  border: 1px solid $grey;
+  border: 1px solid silver;
+  margin-bottom: 10px;
   & .input {
     & --error {
       border-color: red;
@@ -9,24 +10,43 @@ input, textarea {
   }
 }
 
-label {
-  padding: 10px 0;
-  display: block;
+.form {
+//   &__name,
+//   &__email {
+
+//     margin: 5px 0;
+//     @media all and (max-width: 450px) {
+
+//     }
+//   }
+//   &__name {
+//     margin-right: 5px;
+//   }
+//   &__subject,
+//   &__message {
+//     // width: 100%;
+//     margin: 5px 0;
+//   }
+  &__button:hover {
+    background: $yellow;
+  }
 }
 
-.form {
-  background: white;
-  padding: 2rem;
-  box-shadow: $grad;
-  & + .form {
-    margin-top: 4rem;
-  }
-  // I know this isn't bem but meh
-  h2 {
-    margin: 0;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid $grey;
-  }
-}
+
+
+// .form {
+//   background: white;
+//   padding: 2rem;
+//   box-shadow: $grad;
+//   & + .form {
+//     margin-top: 4rem;
+//   }
+//   // I know this isn't bem but meh
+//   h2 {
+//     margin: 0;
+//     font-size: 2rem;
+//     padding-bottom: 2rem;
+//     margin-bottom: 2rem;
+//     border-bottom: 1px solid $grey;
+//   }
+// }

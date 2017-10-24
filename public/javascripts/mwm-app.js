@@ -1,4 +1,5 @@
 import '../sass/style.scss';
 
-import { $, $$ } from './modules/bling';
+import $ from '../dist/jquery.min.js';
 
+import './modules/owlCarousel.js';

@@ -1,24 +1,20 @@
 extends layout
 
 block content
-	script.
-		$(document).ready(function(){
-			const owl = $(".owl-carousel");
-			owl.owlCarousel({
-				item: 7,
-				loop: true,
-				autoplay: true,
-				autoplayTimeout:1500,
-				autoplayHoverPause: true
-			});
-		});
 	.inner
-		h2= title
-		.owl-carousel
-			img.square.square1(src="https://placebear.com/320/200")
-			img.square.square2(src="https://placebear.com/320/200")
-			img.square.square3(src="https://placebear.com/320/200")
-			img.square.square4(src="https://placebear.com/320/200")
-			img.square.square5(src="https://placebear.com/320/200")
-			img.square.square6(src="https://placebear.com/320/200")
-			img.square.square7(src="https://placebear.com/320/200")
+		h3= title
+		.top__images
+			.services__image.image_left
+				img.koolduct__picture(src="https://placebear.com/234/156", alt="")
+				p.services__image--text Koolduct
+			.services__image.image_center
+				img.koolduct__picture(src="https://placebear.com/234/156", alt="")
+				p.services__image--text Welding MIG and TIG
+			.services__image.image_right
+				img.koolduct__picture(src="https://placebear.com/234/156", alt="")
+				p.services__image--text Alterations
+		.bottom__text
+			ul
+				li We are one of the very few companies that are approved by Kingspan Insulation to not only supply Koolduct ductwork systems but also to offer installation to a very high standard.
+				li We produce our own ductwork drawings on AutoCad and can give detailed sections and 3D images if requested.
+				li We can also offer sheet metal work in Stainless Steel, Aluminium, Mild Steel etc. We are able to weld in MIG and TIG format.

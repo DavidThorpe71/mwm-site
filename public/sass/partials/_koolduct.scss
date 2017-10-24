@@ -1,0 +1,31 @@
+.img__container { 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.koolduct__img--container {
+	position: relative;
+	margin: 10px;
+	width: 250px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.overlay {
+	font-size: 16px;
+	padding: 84px 0 0 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(241,241,241,0.75);
+	text-align: center;
+	opacity: 0;
+	transition: opacity .25s ease;
+}
+
+.koolduct__img--container:hover .overlay{
+	opacity: 1;
+}
