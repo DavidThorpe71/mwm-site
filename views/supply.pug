@@ -1,5 +1,11 @@
 extends layout
 
+include mixins/_photoCard
+
 block content
 	.inner
 		h3= title
+		.photos.grid
+			.grid-sizer
+			each photo in photos
+				+photoCard(photo)

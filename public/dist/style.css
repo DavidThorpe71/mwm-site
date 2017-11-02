@@ -929,4 +929,54 @@ pre.error {
     vertical-align: middle;
     font-size: 16px; }
 
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 30%;
+  margin-bottom: 10px; }
+  @media all and (max-width: 850px) {
+    .grid-sizer,
+    .grid-item {
+      width: 48%; } }
+  @media all and (max-width: 550px) {
+    .grid-sizer,
+    .grid-item {
+      width: 100%; } }
+
+/* 2 columns */
+.grid-item--width2 {
+  width: 60%; }
+  @media all and (max-width: 850px) {
+    .grid-item--width2 {
+      width: 100%; } }
+
+.photo {
+  background: white; }
+  .photo__desc, .photo__name {
+    padding: 1rem; }
+    .photo__desc p, .photo__name p {
+      line-height: 1.2;
+      margin-bottom: 0; }
+
+.photo__actions {
+  position: relative;
+  z-index: 2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.photo__action {
+  font-size: 10px; }
+  .photo__action svg {
+    width: 25px;
+    fill: grey; }
+  .photo__action--edit a {
+    border-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map*/

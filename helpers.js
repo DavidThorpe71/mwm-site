@@ -21,8 +21,11 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = `MW Metalworks`;
 
 exports.menu = [
-  { slug: '/koolduct', title: 'Koolduct', icon: 'shelves', },
-  { slug: '/supply', title: 'Supply & Install', icon: 'vinyl', },
-  { slug: '/services', title: 'Services', icon: 'format', },
-  { slug: '/contact', title: 'Contact', icon: 'add', },
+  { slug: '/', title: 'Home', },
+  { slug: '/koolduct', title: 'Koolduct', },
+  { slug: '/supply', title: 'Supply & Install', },
+  { slug: '/services', title: 'Services', },
+  { slug: '/contact', title: 'Contact', },
+  { slug: '/add', title: 'Add', },
+  { slug: '/login', title: 'Login', },
 ];

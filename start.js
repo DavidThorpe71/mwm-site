@@ -19,8 +19,8 @@ mongoose.connection.on('error', (err) => {
 
 // READY?! Let's go!
 
-//import all the models
-// require('./models/Record');
+// import all the models
+require('./models/Photo');
 // require('./models/User');
 
 // Start our app!

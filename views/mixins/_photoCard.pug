@@ -1,0 +1,14 @@
+mixin photoCard(photo = {})
+	.photo.grid-item
+		.photo__actions
+			.photo__action.store__action--edit
+				a(href=`/supply/${photo._id}/edit`)
+					!= h.icon('pencil')
+		.photo__image
+			a(href=`/supply/${photo.slug}`)
+				img(src=`/uploads/${photo.photo || 'weight.jpg'}`)
+		.photo__name
+			span #{photo.name}
+		.photo__desc
+			span #{photo.caption}
+		

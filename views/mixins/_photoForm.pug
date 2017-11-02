@@ -1,0 +1,11 @@
+mixin photoForm(photo = {})
+	form(action=`/add/${photo._id || ''}` method="POST" class="card" enctype="multipart/form-data")
+		label(for="name") Name
+		input(type="text" name="name" value=photo.name)
+		label(for="caption") Caption
+		textarea(name="caption")= photo.caption
+		label(for="photo") Upload photo
+			input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg, image/jpg")
+			if photo.photo
+				img(src=`/uploads/${photo.photo}`, alt=photo.name)
+		input(type="submit" value="Save" class="button")
