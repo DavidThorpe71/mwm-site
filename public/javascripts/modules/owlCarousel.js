@@ -16,9 +16,6 @@ $(document).ready(function(){
 	        },
 	        450:{
 	            items:3,
-	        },
-	        800:{
-	            items:5,
 	        }
 	    }
 	});

@@ -8,4 +8,12 @@ mixin photoForm(photo = {})
 			input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg, image/jpg")
 			if photo.photo
 				img(src=`/uploads/${photo.photo}`, alt=photo.name)
+		- const choices = ['Home', 'Supply and Install', 'Koolduct']
+		- const category = photo.category || []
+		p.category__label Where do you want this photo to go?
+		ul.categories
+			each choice in choices
+				.category.category__choice
+					label.check(for=choice) #{choice}
+					input.check__box(type="checkbox", id=choice, value=choice, name="category" checked=(category.includes(choice)))
 		input(type="submit" value="Save" class="button")

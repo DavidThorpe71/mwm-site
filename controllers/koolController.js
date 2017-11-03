@@ -16,8 +16,9 @@ const multerOptions = {
 	}
 };
 
-exports.homePage = (req, res) => {
-	res.render('index', { title: 'MW Metalworks' });
+exports.homePage = async (req, res) => {
+	const photos = await Photo.find({ category: 'Home' });
+	res.render('index', { title: 'MW Metalworks', photos });
 };
 
 exports.koolDuct = (req, res) => {
@@ -57,11 +58,11 @@ exports.resize = async (req, res, next) => {
 exports.createPhoto = async (req, res) => {
 	const photo = await (new Photo(req.body)).save();
 	req.flash('success', `Successfully added photo - ${photo.name}`)
-	res.redirect(`/photo/${photo.slug}`);
+	res.redirect(`/supply/${photo.slug}`);
 };
 
 exports.getPhotos = async (req, res) => {
-	const photos = await Photo.find();
+	const photos = await Photo.find({ category: 'Supply and Install' });
 	res.render('supply', { title: 'Supply and Install', photos });
 };
 

@@ -17,7 +17,8 @@ const photoSchema = new mongoose.Schema({
 	created: {
 		type: Date,
 		default: Date.now
-	}
+	},
+	category: [String]
 });
 
 // This section sets the slug

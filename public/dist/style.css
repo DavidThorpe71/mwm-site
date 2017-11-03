@@ -584,6 +584,24 @@ input, textarea {
 .form__button:hover {
   background: #ffda41; }
 
+.categories {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid silver;
+  margin-top: 0; }
+
+.category {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+  .category__label {
+    margin-bottom: 0; }
+
+.check__box {
+  width: auto;
+  margin-left: 10px; }
+
 .formats {
   margin: 0;
   padding: 0;
@@ -823,6 +841,9 @@ pre.error {
   .services__image--text {
     margin: 0px;
     padding: 5px; }
+
+.services__picture {
+  height: 152px; }
 
 .bottom__text li {
   padding: 5px;
