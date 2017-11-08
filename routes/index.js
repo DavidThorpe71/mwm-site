@@ -13,7 +13,10 @@ router.get('/supply', catchErrors(koolController.getPhotos));
 router.get('/services', koolController.services);
 router.get('/contact', koolController.contact);
 
-router.get('/add', koolController.addPhoto);
+router.get('/add',
+	authController.isLoggedIn,
+	koolController.addPhoto
+);
 router.post('/add', 
 	koolController.upload,
 	catchErrors(koolController.resize),
@@ -31,12 +34,24 @@ router.get('/supply/:id/edit', catchErrors(koolController.editPhoto));
 router.get('/supply/:slug', catchErrors(koolController.getPhotoBySlug));
 
 router.get('/login', userController.loginForm);
-router.get('/register', userController.registerForm);
+router.post('/login', authController.login);
+router.get('/register',
+	authController.isLoggedIn,
+	userController.registerForm
+);
 
 router.post('/register', 
 	userController.validateRegister,
 	userController.register,
 	authController.login
 );
+
+router.get('/logout', authController.logout);
+
+router.get('/account',
+	authController.isLoggedIn,
+	userController.account
+);
+router.post('/account', catchErrors(userController.updateAccount));
 
 module.exports = router;

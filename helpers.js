@@ -26,7 +26,4 @@ exports.menu = [
   { slug: '/supply', title: 'Supply & Install', },
   { slug: '/services', title: 'Services', },
   { slug: '/contact', title: 'Contact', },
-  { slug: '/add', title: 'Add', },
-  { slug: '/login', title: 'Login', },
-  { slug: '/register', title: 'Register', },
 ];
