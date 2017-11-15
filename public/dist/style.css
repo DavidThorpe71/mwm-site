@@ -932,6 +932,11 @@ pre.error {
 .koolduct__img--container:hover .overlay {
   opacity: 1; }
 
+.koolduct__img {
+  object-fit: cover;
+  width: 250px;
+  height: 200px; }
+
 .index__text {
   margin-top: 25px; }
 

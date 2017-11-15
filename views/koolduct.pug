@@ -4,39 +4,14 @@ block content
 	.inner
 		h3= title
 		.img__container
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/250/300", alt="")
-				.overlay
-					span Koolduct Installation Vents
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/250/320", alt="")
-				.overlay
-					span Koolduct Panel
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/260/300", alt="")
-				.overlay
-					span Koolduct Black
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/250/310", alt="")
-				.overlay
-					span Kingspan KoolDuct Partner
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/270/300", alt="")
-				.overlay
-					span Koolduct Installation
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/255/300", alt="")
-				.overlay
-					span Koolduct Installation
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/300/380", alt="")
-				.overlay
-					span Koolduct Installation
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/280/300", alt="")
-				.overlay
-					span Koolduct Installation
-			.koolduct__img--container
-				img.koolduct__img(src="https://placebear.com/270/300", alt="")
-				.overlay
-					span Lightweight Koolduct
+			each photo in photos
+				.koolduct__img--container
+					a(href=`/supply/${photo.slug}`)
+						img.koolduct__img(src=`/uploads/${photo.photo || 'weight.jpg'}`)
+					.overlay
+						span #{photo.name}
+						if user
+							.photo__actions
+								.photo__action.store__action--edit
+									a(href=`/supply/${photo._id}/edit`)
+										!= h.icon('pencil')

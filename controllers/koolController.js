@@ -21,8 +21,9 @@ exports.homePage = async (req, res) => {
 	res.render('index', { title: 'MW Metalworks', photos });
 };
 
-exports.koolDuct = (req, res) => {
-	res.render('koolduct', { title: 'Koolduct' });
+exports.koolDuct = async (req, res) => {
+	const photos = await Photo.find({ category: 'Koolduct' });
+	res.render('koolduct', { title: 'KoolDuct', photos });
 };
 
 exports.services = (req, res) => {
