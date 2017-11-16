@@ -730,6 +730,8 @@ pre.error {
   .single__image {
     width: 100%;
     max-width: 400px; }
+  .single__details {
+    margin: 10px 0; }
 
 .tracks {
   margin-bottom: 12px; }
@@ -913,12 +915,12 @@ pre.error {
   position: relative;
   margin: 10px;
   width: 250px;
-  height: 200px;
+  height: 250px;
   overflow: hidden; }
 
 .overlay {
   font-size: 16px;
-  padding: 84px 0 0 0;
+  padding: 117px 0 0 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -935,7 +937,7 @@ pre.error {
 .koolduct__img {
   object-fit: cover;
   width: 250px;
-  height: 200px; }
+  height: 250px; }
 
 .index__text {
   margin-top: 25px; }
@@ -977,9 +979,11 @@ pre.error {
       width: 100%; } }
 
 .photo {
-  background: white; }
+  background: white;
+  border: 1px solid silver; }
   .photo__desc, .photo__name {
-    padding: 1rem; }
+    padding: 1rem;
+    border-top: 1px solid silver; }
     .photo__desc p, .photo__name p {
       line-height: 1.2;
       margin-bottom: 0; }
@@ -1004,5 +1008,8 @@ pre.error {
     fill: grey; }
   .photo__action--edit a {
     border-bottom: 0; }
+
+.photo__image img {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map*/

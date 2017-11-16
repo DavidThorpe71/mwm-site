@@ -3,8 +3,8 @@ extends layout
 block content
 	.single
 		.single__hero
-			img.single__image(src=`/uploads/${photo.photo || 'weight.jpg'}`, alt="Supply photo")
-			h3.title.title--single
-				a(href=`/supply/${photo.slug}`) #{photo.name}
+			a(href="javascript:history.back()")
+				img.single__image(src=`/uploads/${photo.photo || 'weight.jpg'}`, alt="Supply photo")
+			h3.title.title--single #{photo.name}
 			.single__details
 				span.caption #{photo.caption}

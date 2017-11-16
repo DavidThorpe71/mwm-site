@@ -20,6 +20,7 @@
 
 .photo {
   background:white;
+  border: 1px solid silver;
 //   margin: 10px 0;
 //   width:30%;
 //   &--wide {
@@ -28,6 +29,7 @@
   &__desc,
   &__name {
     padding: 1rem;
+    border-top: 1px solid silver;
     p {
       line-height: 1.2;
       margin-bottom: 0;
@@ -65,6 +67,9 @@
   }
 }
 
+.photo__image img {
+  display: block;
+}
 
 // .photo__hero {
 //   // position: relative;

@@ -6,10 +6,10 @@ block content
 		.img__container
 			each photo in photos
 				.koolduct__img--container
-					a(href=`/supply/${photo.slug}`)
-						img.koolduct__img(src=`/uploads/${photo.photo || 'weight.jpg'}`)
+					img.koolduct__img(src=`/uploads/${photo.photo || 'weight.jpg'}`)
 					.overlay
-						span #{photo.name}
+						a(href=`/supply/${photo.slug}`)
+							span #{photo.name}
 						if user
 							.photo__actions
 								.photo__action.store__action--edit
