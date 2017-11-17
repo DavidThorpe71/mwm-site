@@ -48,6 +48,10 @@ p a {
   border-bottom: 2px solid $yellow;
 }
 
+.contactWriting__entry a {
+  border-bottom: 2px solid $yellow;
+}
+
 .contacts {
   font-size: 14px;
   @media all and (max-width: 560px) {
@@ -61,4 +65,17 @@ p a {
   @media all and (max-width: 560px) {
     font-size: 14px;
   }
+}
+
+.contact__entry {
+  display: flex;
+  margin: 10px 0;
+  // align-items: center;
+}
+
+.icon {
+  fill: $blue;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
 }

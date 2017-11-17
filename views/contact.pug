@@ -5,12 +5,21 @@ block content
 		h3 Get in Touch
 		.contactContainer
 			.contactWriting
-				p <strong>Phone: </strong> 
-					a(href="tel:01256 331334") 01256 331334
-				p <strong>Email: </strong>
-					a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
-				p <strong>Address:</strong></br>
-					a(href="https://goo.gl/maps/5PRKCc79k4S2") Unit 3 Devonshire Business Park,</br>Knights Park Road,</br>Basingstoke,</br>RG21 6XN
+				.contact__entry
+					.icon
+						!=h.icon('phone')
+					.contactWriting__entry
+						a(href="tel:01256 331334") 01256 331334
+				.contact__entry
+					.icon
+						!=h.icon('envelope')
+					.contactWriting__entry
+						a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
+				.contact__entry
+					.icon
+						!=h.icon('location')
+					.contactWriting__entry
+						a(href="https://goo.gl/maps/5PRKCc79k4S2") Unit 3 Devonshire Business Park,</br>Knights Park Road,</br>Basingstoke,</br>RG21 6XN
 				.formContainer
 					form.form(action="/contact" method="POST")
 						p <strong>Contact Form:</strong>
