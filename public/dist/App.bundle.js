@@ -2468,7 +2468,36 @@ __webpack_require__(2);
 
 __webpack_require__(1);
 
+__webpack_require__(13);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$(document).ready(function () {
+  $('.img__container').magnificPopup({
+    delegate: 'img',
+    type: 'image',
+    gallery: { enabled: true },
+    callbacks: {
+      elementParse: function elementParse(item) {
+        var $el = $(item.el);
+        item.src = $el.attr('src');
+      }
+    }
+  });
+});
 
 /***/ })
 /******/ ]);

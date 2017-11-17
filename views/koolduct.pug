@@ -4,14 +4,12 @@ block content
 	.inner
 		h3= title
 		.img__container
+			img.koolduct__img.koolduct__logo(src=`/uploads/c102f261-9c06-4276-bc74-73481803bc72.jpeg`, title="Kingspan KoolDuct Partner")
+
 			each photo in photos
-				.koolduct__img--container
-					img.koolduct__img(src=`/uploads/${photo.photo || 'weight.jpg'}`)
-					.overlay
-						a(href=`/supply/${photo.slug}`)
-							span #{photo.name}
-						if user
-							.photo__actions
-								.photo__action.store__action--edit
-									a(href=`/supply/${photo._id}/edit`)
-										!= h.icon('pencil')
+				img.koolduct__img(src=`/uploads/${photo.photo || 'weight.jpg'}`, title=`${photo.name}`)
+				if user
+					.photo__actions
+						.photo__action.store__action--edit
+							a(href=`/supply/${photo._id}/edit`)
+								!= h.icon('pencil')

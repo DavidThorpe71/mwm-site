@@ -6,3 +6,4 @@ import './modules/owlCarousel.js';
 
 import './modules/masonry.js';
 
+import './modules/magnific.js';
