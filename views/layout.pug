@@ -17,7 +17,7 @@ html
 						a(href="/")
 							img.logo(src="/images/MWM.jpg", alt="MW Metalworks logo")
 					.header__top--info
-						h2.name MW Metalworks
+						h2.name MW Metalworks Ltd
 						.contacts
 							.contacts__email
 								a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
@@ -62,5 +62,6 @@ html
 			script(src="/dist/owl.carousel.min.js")
 			script(src="/dist/masonry.pkgd.min.js")
 			script(src="/dist/imagesloaded.pkgd.min.js")
-			script(src="/dist/App.bundle.js")
 			script(src="/dist/magnific-popup/jquery.magnific-popup.min.js")
+			script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}`)
+			script(src="/dist/App.bundle.js")

@@ -895,9 +895,10 @@ pre.error {
     height: 54px;
     width: 54px; } }
 
-.map {
+#map {
   border: 1px solid silver;
-  margin: 10px 0; }
+  margin: 10px 0;
+  height: 400px; }
 
 .contactContainer {
   display: -ms-flexbox;

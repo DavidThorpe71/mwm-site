@@ -1,7 +1,7 @@
 function initMap() {
 	var mw = {lat: 51.272848, lng: -1.103419};
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 4,
+		zoom: 14,
 		center: mw
 	});
 	var marker = new google.maps.Marker({

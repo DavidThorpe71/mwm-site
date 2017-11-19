@@ -7,3 +7,7 @@ import './modules/owlCarousel.js';
 import './modules/masonry.js';
 
 import './modules/magnific.js';
+
+import initMap from './modules/map';
+
+initMap();

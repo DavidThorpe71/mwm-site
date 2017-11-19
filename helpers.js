@@ -12,7 +12,7 @@ exports.moment = require('moment');
 exports.dump = (obj) => JSON.stringify(obj, null, 2);
 
 // Making a static map is really long - this is a handy helper function to make one
-exports.staticMap = `https://maps.googleapis.com/maps/api/staticmap?center=51.272875,-1.103418&zoom=14&size=420x360&key=${process.env.MAP_KEY}&markers=51.272875,-1.103418&scale=2`;
+exports.Map = `https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&callback=initMap`;
 
 // inserting an SVG
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);

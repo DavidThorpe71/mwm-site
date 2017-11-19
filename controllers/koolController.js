@@ -31,18 +31,7 @@ exports.services = (req, res) => {
 };
 
 exports.contact = (req, res) => {
-	const map =  initMap => {
-		var mw = {lat: 51.272848, lng: -1.103419};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
-			center: mw
-		});
-		var marker = new google.maps.Marker({
-			position: mw,
-			map: map
-		});
-	};
-	res.render('contact', { title: 'Contact', map });
+	res.render('contact', { title: 'Contact' });
 };
 
 exports.addPhoto = (req, res) => {
