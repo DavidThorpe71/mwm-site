@@ -54,8 +54,9 @@ exports.sendContact = async (options) => {
 		},
 		to: 'MW Metalworks <noreply@mwmetalworks.com',
 		subject: options.subject,
-		html: 'this will be filled in later',
-		text: 'this will be filled in even later'
+		
+		html,
+		text
 	}
 	const sendMail = promisify(transportContact.sendMail, transportContact);
 	return sendMail(mailOptions);

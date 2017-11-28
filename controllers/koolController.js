@@ -40,6 +40,7 @@ exports.contactForm = async (req, res) => {
 		name: req.body.name,
 		email: req.body.email,
 		subject: req.body.subject,
+		words: req.body.message,
 		filename: 'contact-form'
 	})
 	req.flash('success', 'Thank-you for contacting us!');
