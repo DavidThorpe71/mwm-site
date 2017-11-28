@@ -4,7 +4,7 @@ const juice = require('juice');
 const htmlToText = require('html-to-text');
 const promisify = require('es6-promisify');
 
-const transport = nodemailer.createTransport({
+const transportReset = nodemailer.createTransport({
 	host: process.env.MAIL_HOST,
 	port: process.env.MAIL_PORT,
 	auth: {
@@ -19,7 +19,7 @@ const generateHTML = (filename, options = {}) => {
 	return inlined;
 }
 
-exports.send = async (options) => {
+exports.sendReset = async (options) => {
 	const html = generateHTML(options.filename, options);
 	const text = htmlToText.fromString(html);
 
@@ -30,6 +30,33 @@ exports.send = async (options) => {
 		html,
 		text
 	}
-	const sendMail = promisify(transport.sendMail, transport);
+	const sendMail = promisify(transportReset.sendMail, transportReset);
+	return sendMail(mailOptions);
+}
+
+const transportContact = nodemailer.createTransport({
+	host: process.env.MAIL_HOST,
+	port: process.env.MAIL_PORT,
+	auth: {
+		user: process.env.MAIL_USER,
+		pass: process.env.MAIL_PASS		
+	}
+});
+
+exports.sendContact = async (options) => {
+	const html = generateHTML(options.filename, options);
+	const text = htmlToText.fromString(html);
+
+	const mailOptions = {
+		from: {
+			name: options.name,
+			address: options.email
+		},
+		to: 'MW Metalworks <noreply@mwmetalworks.com',
+		subject: options.subject,
+		html: 'this will be filled in later',
+		text: 'this will be filled in even later'
+	}
+	const sendMail = promisify(transportContact.sendMail, transportContact);
 	return sendMail(mailOptions);
 }

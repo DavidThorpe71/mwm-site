@@ -11,7 +11,9 @@ router.get('/', koolController.homePage);
 router.get('/koolduct', koolController.koolDuct);
 router.get('/supply', catchErrors(koolController.getPhotos));
 router.get('/services', koolController.services);
+
 router.get('/contact', koolController.contact);
+router.post('/contact', catchErrors(koolController.contactForm));
 
 router.get('/add',
 	authController.isLoggedIn,

@@ -3,6 +3,7 @@ const Photo = mongoose.model('Photo');
 const multer = require('multer');
 const jimp = require('jimp');
 const uuid = require('uuid');
+const mail = require('../handlers/mail');
 
 const multerOptions = {
 	storage: multer.memoryStorage(),
@@ -33,6 +34,17 @@ exports.services = (req, res) => {
 exports.contact = (req, res) => {
 	res.render('contact', { title: 'Contact' });
 };
+
+exports.contactForm = async (req, res) => {
+	await mail.sendContact({
+		name: req.body.name,
+		email: req.body.email,
+		subject: req.body.subject,
+		filename: 'contact-form'
+	})
+	req.flash('success', 'Thank-you for contacting us!');
+	res.redirect('/contact');
+}
 
 exports.addPhoto = (req, res) => {
 	res.render('editPhoto', { title: 'Add a photo' });
