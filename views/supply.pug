@@ -5,7 +5,14 @@ include mixins/_photoCard
 block content
 	.inner
 		h3= title
+		h4 Galvanized Ductwork
 		.photos.grid
 			.grid-sizer
-			each photo in photos
+			each photo in galvanized
+				+photoCard(photo)
+		h4 Ductwork in other materials
+		p Fully Welded Aluminium Ductwork under Construction in Leamington
+		.photos.grid
+			.grid-sizer
+			each photo in otherDuct
 				+photoCard(photo)

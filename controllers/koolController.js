@@ -76,8 +76,10 @@ exports.createPhoto = async (req, res) => {
 };
 
 exports.getPhotos = async (req, res) => {
-	const photos = await Photo.find({ category: 'Supply and Install' });
-	res.render('supply', { title: 'Supply and Install', photos });
+	const photos1 = Photo.find({ category: 'Galvanized Ductwork' });
+	const photos2 = Photo.find({ category: 'Ductwork in other materials' });
+	const [galvanized, otherDuct] = await Promise.all([ photos1, photos2]);
+	res.render('supply', { title: 'Supply and Install', galvanized, otherDuct });
 };
 
 exports.editPhoto = async (req, res) => {

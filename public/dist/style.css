@@ -462,6 +462,15 @@ h3 {
       font-size: 2rem; } }
 
 h4 {
+  color: #3588CC;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 15px 0; }
+  @media all and (max-width: 560px) {
+    h4 {
+      font-size: 1rem; } }
+
+h5 {
   -ms-transform: skew(20deg);
       transform: skew(20deg);
   text-align: center;
@@ -470,7 +479,7 @@ h4 {
   font-size: 2rem;
   margin: 15px 0; }
   @media all and (max-width: 560px) {
-    h4 {
+    h5 {
       font-size: 1rem; } }
 
 a {

@@ -8,7 +8,7 @@ mixin photoForm(photo = {})
 			input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg, image/jpg")
 			if photo.photo
 				img(src=`/uploads/${photo.photo}`, alt=photo.name)
-		- const choices = ['Home', 'Supply and Install', 'Koolduct']
+		- const choices = ['Home', 'Koolduct', 'Galvanized Ductwork', 'Ductwork in other materials']
 		- const category = photo.category || []
 		p.category__label Where do you want this photo to go?
 		ul.categories
