@@ -18,3 +18,23 @@
 	}
 }
 
+.photo__image {
+	max-height: 530px;
+}
+
+.bx-wrapper {
+	margin: 0 auto;
+}
+
+.index__subs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.index__subs svg {
+	height: 10px;
+	width: 10px;
+	fill: $blue;
+	
+}

@@ -6,6 +6,7 @@ html
 		link(rel="stylesheet" href="/dist/owl.theme.default.css")
 		link(rel="stylesheet" href="/dist/owl.carousel.min.css")
 		link(rel="stylesheet" href="/dist/magnific-popup/magnific-popup.css")
+		link(rel="stylesheet" href="/dist/jquery.bxslider.css")
 		script(src="/dist/jquery.min.js")
 		link(rel='stylesheet', href='/dist/style.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -20,8 +21,12 @@ html
 						h2.name MW Metalworks Ltd
 						.contacts
 							.contacts__email
+								.icon
+									!=h.icon('mail')
 								a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
 							.contacts__phone
+								.icon
+									!=h.icon('phone')
 								a(href="tel:01256331334") 01256 331334
 				nav.nav
 					.nav__section.nav__section--pages
@@ -32,13 +37,17 @@ html
 					.nav__section.nav__section--user
 						if user
 							li.nav__item: a.nav__link(href="/add", class=(currentPath.startsWith('/add') ? 'nav__link--active' : ''))
-								span Add
+								.icon
+									!=h.icon('plus')
 							li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : ''))
-								span Register
+								.icon
+									!=h.icon('user-plus')
 							li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : ''))
-								span Account
+								.icon
+									!=h.icon('user')
 							li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : ''))
-								span Logout
+								.icon
+									!=h.icon('log-out')
 
 		block messages
 			if locals.flashes
@@ -60,6 +69,7 @@ html
 
 		block scripts
 			script(src="/dist/owl.carousel.min.js")
+			script(src="/dist/jquery.bxslider.min.js")
 			script(src="/dist/masonry.pkgd.min.js")
 			script(src="/dist/imagesloaded.pkgd.min.js")
 			script(src="/dist/magnific-popup/jquery.magnific-popup.min.js")

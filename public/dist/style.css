@@ -23,6 +23,11 @@ footer {
   height: 15px;
   overflow: hidden; }
 
+.contacts__email,
+.contacts__phone {
+  display: -ms-flexbox;
+  display: flex; }
+
 html {
   box-sizing: border-box; }
 
@@ -482,6 +487,9 @@ h5 {
     h5 {
       font-size: 1rem; } }
 
+.contacts a {
+  color: #3588CC; }
+
 a {
   text-decoration: none;
   color: #303030; }
@@ -510,10 +518,10 @@ p a {
   display: flex;
   margin: 10px 0; }
 
-.icon {
-  fill: #3588CC;
-  height: 14px;
-  width: 14px;
+.icon svg {
+  stroke: #3588CC;
+  height: 16px;
+  width: 16px;
   margin-right: 5px; }
 
 @keyframes slideIn {
@@ -874,6 +882,9 @@ pre.error {
   padding: 5px;
   font-size: 16px; }
 
+.image_center .services__picture {
+  cursor: pointer; }
+
 .header__top {
   background-color: #f9f9f8;
   display: -ms-flexbox;
@@ -918,6 +929,9 @@ pre.error {
 .contactWriting {
   padding-right: 10px; }
 
+.mapContainer {
+  padding-left: 10px; }
+
 .mapContainer,
 .contactWriting {
   width: 50%; }
@@ -925,7 +939,8 @@ pre.error {
     .mapContainer,
     .contactWriting {
       width: 100%;
-      padding-right: 0; } }
+      padding-right: 0;
+      padding-left: 0; } }
 
 .img__container {
   display: -ms-flexbox;
@@ -980,6 +995,25 @@ pre.error {
     padding: 30px 15px 15px 15px;
     vertical-align: middle;
     font-size: 16px; }
+
+.photo__image {
+  max-height: 530px; }
+
+.bx-wrapper {
+  margin: 0 auto; }
+
+.index__subs {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.index__subs svg {
+  height: 10px;
+  width: 10px;
+  fill: #3588CC; }
 
 /* fluid 5 columns */
 .grid-sizer,

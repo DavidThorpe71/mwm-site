@@ -11,3 +11,5 @@ import './modules/magnific.js';
 import initMap from './modules/map';
 
 initMap();
+
+import './modules/bxslider.js';

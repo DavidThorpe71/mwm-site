@@ -14,11 +14,16 @@
 	padding-right: 10px;
 }
 
+.mapContainer {
+	padding-left: 10px;
+}
+
 .mapContainer,
 .contactWriting {
 	width: 50%;
 	@media all and (max-width: 935px){
 		width: 100%;
 		padding-right: 0;
+		padding-left: 0;
 	}
 }

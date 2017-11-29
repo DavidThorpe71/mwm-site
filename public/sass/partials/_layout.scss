@@ -27,3 +27,8 @@ footer {
     height: 15px;
     overflow: hidden;
 }
+
+.contacts__email,
+.contacts__phone {
+  display: flex;
+}

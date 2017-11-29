@@ -2539,9 +2539,34 @@ var _map = __webpack_require__(2);
 
 var _map2 = _interopRequireDefault(_map);
 
+__webpack_require__(15);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _map2.default)();
+
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$(document).ready(function () {
+		$('.slider').bxSlider({
+				auto: true,
+				autoControls: true,
+				stopAutoOnClick: true,
+				pager: true,
+				slideWidth: 800
+		});
+});
 
 /***/ })
 /******/ ]);

@@ -49,6 +49,10 @@ h5 {
   }
 }
 
+.contacts a {
+  color: $blue;
+}
+
 a {
   text-decoration: none;
   color:$black;
@@ -83,9 +87,9 @@ p a {
   // align-items: center;
 }
 
-.icon {
-  fill: $blue;
-  height: 14px;
-  width: 14px;
+.icon svg {
+  stroke: $blue;
+  height: 16px;
+  width: 16px;
   margin-right: 5px;
 }

@@ -12,21 +12,23 @@ block content
 						a(href="tel:01256 331334") 01256 331334
 				.contact__entry
 					.icon
-						!=h.icon('envelope')
+						!=h.icon('mail')
 					.contactWriting__entry
 						a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
 				.contact__entry
 					.icon
-						!=h.icon('location')
+						!=h.icon('map-pin')
 					.contactWriting__entry
 						a(href="https://goo.gl/maps/5PRKCc79k4S2") Unit 3 Devonshire Business Park,</br>Knights Park Road,</br>Basingstoke,</br>RG21 6XN
-				.formContainer
-					form.form(action="/contact" method="POST")
-						p <strong>Contact Form:</strong>
-						input.form__name(type="text" name="name" placeholder="Name")
-						input.form__email(type="text" name="email" placeholder="Email")
-						input.form__subject(type="text" name="subject" placeholder="Subject")
-						textarea.form__message(name="message" placeholder="Message")
-						input.form__button(type="submit" value="Send")
+				.contact__entry
+					.icon
+						!=h.icon('edit-3')
+					.formContainer
+						form.form(action="/contact" method="POST")
+							input.form__name(type="text" name="name" placeholder="Name")
+							input.form__email(type="text" name="email" placeholder="Email")
+							input.form__subject(type="text" name="subject" placeholder="Subject")
+							textarea.form__message(name="message" placeholder="Message")
+							input.form__button(type="submit" value="Send")
 			.mapContainer
 				#map
