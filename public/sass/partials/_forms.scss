@@ -1,36 +1,36 @@
-input, textarea {
-  width: 100%;
-  padding:10px;
-  border: 1px solid silver;
-  margin-bottom: 10px;
-  & .input {
-    & --error {
-      border-color: red;
-    }
-  }
-}
+// input, textarea {
+//   width: 100%;
+//   padding:10px;
+//   border: 1px solid silver;
+//   margin-bottom: 10px;
+//   & .input {
+//     & --error {
+//       border-color: red;
+//     }
+//   }
+// }
 
-.form {
-  &__button:hover {
-    background: $yellow;
-  }
-}
+// .form {
+//   &__button:hover {
+//     background: $yellow;
+//   }
+// }
 
-.categories {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid silver;
-  margin-top: 0;
-}
+// .categories {
+//   width: 100%;
+//   padding: 10px;
+//   border: 1px solid silver;
+//   margin-top: 0;
+// }
 
-.category {
-  display: flex;
-  justify-content: flex-start;
-  &__label {
-    margin-bottom: 0;
-  }
-}
-.check__box {
-  width: auto;
-  margin-left: 10px;
-}
+// .category {
+//   display: flex;
+//   justify-content: flex-start;
+//   &__label {
+//     margin-bottom: 0;
+//   }
+// }
+// .check__box {
+//   width: auto;
+//   margin-left: 10px;
+// }

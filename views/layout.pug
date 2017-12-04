@@ -8,46 +8,46 @@ html
 		link(rel="stylesheet" href="/dist/magnific-popup/magnific-popup.css")
 		link(rel="stylesheet" href="/dist/jquery.bxslider.css")
 		script(src="/dist/jquery.min.js")
+		link(href="/dist/bootstrap.min.css" rel="stylesheet")
+		link(href="/dist/carousel.css" rel="stylesheet")
 		link(rel='stylesheet', href='/dist/style.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 	body
 		block header
-			header.top
-				.header__top
-					.header__top--logo
-						a(href="/")
+			header
+				nav.nav(class="navbar navbar-expand-md navbar-dark fixed-top bg-dark")
+					a(class="navbar-brand" href="/")
 							img.logo(src="/images/MWM.jpg", alt="MW Metalworks logo")
-					.header__top--info
-						h2.name MW Metalworks Ltd
-						.contacts
-							.contacts__email
-								.icon
-									!=h.icon('mail')
-								a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
-							.contacts__phone
-								.icon
-									!=h.icon('phone')
-								a(href="tel:01256331334") 01256 331334
-				nav.nav
-					.nav__section.nav__section--pages
-						each item in h.menu
-							li.nav__item
-								a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
-									span #{item.title}
-					.nav__section.nav__section--user
-						if user
-							li.nav__item: a.nav__link(href="/add", class=(currentPath.startsWith('/add') ? 'nav__link--active' : ''))
-								.icon
-									!=h.icon('plus')
-							li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : ''))
-								.icon
-									!=h.icon('user-plus')
-							li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : ''))
-								.icon
-									!=h.icon('user')
-							li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : ''))
-								.icon
-									!=h.icon('log-out')
+							h2.name MW Metalworks Ltd
+							//- .contacts
+							//- 	.contacts__email
+							//- 		.icon
+							//- 			!=h.icon('mail')
+							//- 		a(href="mailto:mwmetalworks@btconnect.com") mwmetalworks@btconnect.com
+							//- 	.contacts__phone
+							//- 		.icon
+							//- 			!=h.icon('phone')
+							//- 		a(href="tel:01256331334") 01256 331334
+					button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+						span(class="navbar-toggler-icon")
+					div(class="collapse navbar-collapse" id="navbarCollapse")
+						ul(class="navbar-nav mr-auto")
+							each item in h.menu
+								li(class="nav-item")
+									a.nav-link(href=item.slug) #{item.title}
+							if user
+								li.nav__item: a.nav__link(href="/add", class=(currentPath.startsWith('/add') ? 'nav__link--active' : ''))
+									.icon
+										!=h.icon('plus')
+								li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : ''))
+									.icon
+										!=h.icon('user-plus')
+								li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : ''))
+									.icon
+										!=h.icon('user')
+								li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : ''))
+									.icon
+										!=h.icon('log-out')
 
 		block messages
 			if locals.flashes
@@ -60,14 +60,20 @@ html
 									p.flash__text!= message
 									button.flash__remove(onClick="this.parentElement.remove()") &times;	
 
-		.content
+		main(role="main")
 			block content
 
 		block footer
-			footer.bottom
-				span © Copyright 2017. MW Metalworks Ltd. All Rights Reserved.
+			footer.container
+				span 
+			footer.container
+				p.float-right
+					a(href="#") Back to top
+				p © Copyright 2017. MW Metalworks Ltd. All Rights Reserved.
 
 		block scripts
+			script(src="/dist/popper.min.js")
+			script(src="/dist/bootstrap.min.js")
 			script(src="/dist/owl.carousel.min.js")
 			script(src="/dist/jquery.bxslider.min.js")
 			script(src="/dist/masonry.pkgd.min.js")
