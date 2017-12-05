@@ -1,17 +1,16 @@
-// .header__top {
-// 	background-color: #f9f9f8;
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	// align-items: center;
-// 	&--info,
-// 	&--logo {
-// 		margin: 5px;
-// 	}
-// }
+.header__top {
+	display: flex;
+	flex-wrap: wrap;
+	// align-items: center;
+	&--info,
+	&--logo {
+		margin: 5px;
+	}
+}
 
-// .name {
-// 	margin-bottom: 0px;
-// }
+.name {
+	margin-bottom: 0px;
+}
 
 .logo {
 	height: 90px;
@@ -20,14 +19,14 @@
 }
 
 
-// .contacts {
-// 	display: flex;
-// 	justify-content: space-between;
-// }
+.contacts {
+	display: flex;
+	justify-content: space-between;
+}
 
-// .contacts a:hover {
-// 	color: #3588CC;	
-// }
+.contacts a:hover {
+	color: #3588CC;	
+}
 
 @media all and (max-width: 560px) {
 	.logo {

@@ -1,29 +1,29 @@
-// #map {
-// 	// max-height: 400px;
-// 	border: 1px solid silver;
-// 	margin: 10px 0;
-// 	height: 400px;
-// }
+#map {
+	// max-height: 400px;
+	border: 1px solid silver;
+	margin: 10px 0;
+	height: 400px;
+}
 
-// .contactContainer {
-// 	display: flex;
-// 	flex-wrap: wrap;
-// }
+.contactContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-// .contactWriting {
-// 	padding-right: 10px;
-// }
+.contactWriting {
+	padding-right: 10px;
+}
 
-// .mapContainer {
-// 	padding-left: 10px;
-// }
+.mapContainer {
+	padding-left: 10px;
+}
 
-// .mapContainer,
-// .contactWriting {
-// 	width: 50%;
-// 	@media all and (max-width: 935px){
-// 		width: 100%;
-// 		padding-right: 0;
-// 		padding-left: 0;
-// 	}
-// }
+.mapContainer,
+.contactWriting {
+	width: 50%;
+	@media all and (max-width: 935px){
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

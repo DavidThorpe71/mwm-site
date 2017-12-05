@@ -1,105 +1,109 @@
-// /* fluid 5 columns */
-// .grid-sizer,
-// .grid-item {
-//   width: 30%;
-//   margin-bottom: 10px;
+.grid {
+  margin: 0 10px;
+}
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 30%;
+  margin-bottom: 10px;
+  @media all and (max-width: 850px) {
+    width: 48%;
+  }
+  @media all and (max-width: 550px) {
+    width: 100%;
+  }
+}
+/* 2 columns */
+.grid-item--width2 {
+  width: 60%;
+  @media all and (max-width: 850px) {
+    width: 100%;
+  }
+}
+
+.photo {
+  background:white;
+  border: 1px solid silver;
+//   margin: 10px 0;
+//   width:30%;
+//   &--wide {
+//     width: 100%;
+//   }
+  &__desc,
+  &__name {
+    padding: 1rem;
+    border-top: 1px solid silver;
+    p {
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
 //   @media all and (max-width: 850px) {
 //     width: 48%;
 //   }
 //   @media all and (max-width: 550px) {
 //     width: 100%;
 //   }
-// }
-// /* 2 columns */
-// .grid-item--width2 {
-//   width: 60%;
-//   @media all and (max-width: 850px) {
+}
+
+.photo__actions {
+  position: relative;
+  z-index: 2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.photo__action {
+  font-size: 10px;
+  svg {
+    width: 25px;
+    fill: grey;
+  }
+  &--edit {
+    a {
+      border-bottom: 0;
+    }
+  }
+}
+
+.photo__image img {
+  display: block;
+}
+
+// .photo__hero {
+//   // position: relative;
+//   // padding: 0 10px 0 10px;
+//   // text-align: right;
+//   &:before {
+//     // display: block;
+//     // content: '';
+//     // position: absolute;
+//     // height: 100%;
+//     // width: 100%;
+//     // top: 0;
+//     // right: 0;
+//     // background:
+//     //   linear-gradient(45deg, hsla(190, 95%, 43%, 1) 0%, hsla(190, 95%, 43%, 0) 70%),
+//     //   linear-gradient(135deg, hsla(219, 93%, 48%, 1) 10%, hsla(219, 93%, 48%, 0) 80%),
+//     //   linear-gradient(225deg, hsla(293, 93%, 48%, 1) 10%, hsla(293, 93%, 48%, 0) 80%),
+//     //   linear-gradient(315deg, hsla(130, 96%, 45%, 1) 100%, hsla(130, 96%, 45%, 0) 70%);
+//     // opacity: 0.6;
+//     // z-index: 1;
+//     // clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+//   }
+//   img {
+//     height: 100%;
 //     width: 100%;
+//     top: 0;
+//     right: 0;
+//     position: absolute;
+//     left: 0;
+//     object-fit: cover;
+//     // clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 //   }
 // }
-
-// .photo {
-//   background:white;
-//   border: 1px solid silver;
-// //   margin: 10px 0;
-// //   width:30%;
-// //   &--wide {
-// //     width: 100%;
-// //   }
-//   &__desc,
-//   &__name {
-//     padding: 1rem;
-//     border-top: 1px solid silver;
-//     p {
-//       line-height: 1.2;
-//       margin-bottom: 0;
-//     }
-//   }
-// //   @media all and (max-width: 850px) {
-// //     width: 48%;
-// //   }
-// //   @media all and (max-width: 550px) {
-// //     width: 100%;
-// //   }
-// }
-
-// .photo__actions {
-//   position: relative;
-//   z-index: 2;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   display: flex;
-//   color: white;
-//   align-items: center;
-//   justify-content: space-around;
-// }
-
-// .photo__action {
-//   font-size: 10px;
-//   svg {
-//     width: 25px;
-//     fill: grey;
-//   }
-//   &--edit {
-//     a {
-//       border-bottom: 0;
-//     }
-//   }
-// }
-
-// .photo__image img {
-//   display: block;
-// }
-
-// // .photo__hero {
-// //   // position: relative;
-// //   // padding: 0 10px 0 10px;
-// //   // text-align: right;
-// //   &:before {
-// //     // display: block;
-// //     // content: '';
-// //     // position: absolute;
-// //     // height: 100%;
-// //     // width: 100%;
-// //     // top: 0;
-// //     // right: 0;
-// //     // background:
-// //     //   linear-gradient(45deg, hsla(190, 95%, 43%, 1) 0%, hsla(190, 95%, 43%, 0) 70%),
-// //     //   linear-gradient(135deg, hsla(219, 93%, 48%, 1) 10%, hsla(219, 93%, 48%, 0) 80%),
-// //     //   linear-gradient(225deg, hsla(293, 93%, 48%, 1) 10%, hsla(293, 93%, 48%, 0) 80%),
-// //     //   linear-gradient(315deg, hsla(130, 96%, 45%, 1) 100%, hsla(130, 96%, 45%, 0) 70%);
-// //     // opacity: 0.6;
-// //     // z-index: 1;
-// //     // clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-// //   }
-// //   img {
-// //     height: 100%;
-// //     width: 100%;
-// //     top: 0;
-// //     right: 0;
-// //     position: absolute;
-// //     left: 0;
-// //     object-fit: cover;
-// //     // clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-// //   }
-// // }

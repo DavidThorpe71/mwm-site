@@ -1,22 +1,22 @@
-// .single {
-//   text-align: center;
-//   &__hero {
-//     text-align: left;
-//     display: inline-block;
-//     margin: 0 auto;
-//     background: white;
-//     padding: 10px 10px 0 10px;
-//     line-height: 1.2;
-//   }
-//   &__image {
-//     width: 100%;
-//     max-width: 400px;
-//   }
-//   &__details {
-//     margin: 10px 0;
-//   }
-// }
+.single {
+  text-align: center;
+  &__hero {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    background: white;
+    padding: 10px 10px 0 10px;
+    line-height: 1.2;
+  }
+  &__image {
+    width: 100%;
+    max-width: 400px;
+  }
+  &__details {
+    margin: 10px 0;
+  }
+}
 
-// .tracks {
-//   margin-bottom: 12px;
-// }
+.tracks {
+  margin-bottom: 12px;
+}
