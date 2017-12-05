@@ -8,6 +8,8 @@ html
 		link(rel="stylesheet" href="/dist/magnific-popup/magnific-popup.css")
 		link(rel="stylesheet" href="/dist/jquery.bxslider.css")
 		script(src="/dist/jquery.min.js")
+		link(href="/dist/bootstrap.min.css" rel="stylesheet")
+		link(href="/dist/carousel.css" rel="stylesheet")
 		link(rel='stylesheet', href='/dist/style.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 	body
@@ -49,6 +51,7 @@ html
 								.icon
 									!=h.icon('log-out')
 
+
 		block messages
 			if locals.flashes
 				.inner
@@ -60,14 +63,20 @@ html
 									p.flash__text!= message
 									button.flash__remove(onClick="this.parentElement.remove()") &times;	
 
-		.content
+		main(role="main")
 			block content
 
 		block footer
-			footer.bottom
-				span © Copyright 2017. MW Metalworks Ltd. All Rights Reserved.
+			footer.container
+				span 
+			footer.container
+				p.float-right
+					a(href="#") Back to top
+				p © Copyright 2017. MW Metalworks Ltd. All Rights Reserved.
 
 		block scripts
+			script(src="/dist/popper.min.js")
+			script(src="/dist/bootstrap.min.js")
 			script(src="/dist/owl.carousel.min.js")
 			script(src="/dist/jquery.bxslider.min.js")
 			script(src="/dist/masonry.pkgd.min.js")
